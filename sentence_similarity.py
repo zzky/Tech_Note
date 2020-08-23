@@ -41,11 +41,7 @@ def read_data(filepath, outputPath):
     pattern_note5 = ',( )?(\(unconfirmed\))?(.*)(Electronically re-signed by)'
     pattern_note6 = ',( )?(\(unconfirmed\))?(.*)(-----------------------------------------)'
     data = []
-    # for item in result:
-    #     if re.search(pattern_note,item):
-    #         print(re.search(pattern_note,item).group(3))
-    # print(result[12])
-    # print(re.search(pattern_note,result[12]).group(3))
+
     for item in result:
         if re.search(pattern_time1, item) and re.search(pattern_time2, item) and (
                 re.search(pattern_note1, item) or re.search(pattern_note2, item) or re.search(pattern_note3, item) or re.search(pattern_note4, item) or re.search(pattern_note5, item) or re.search(pattern_note6, item)):
